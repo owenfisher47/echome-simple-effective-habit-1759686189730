@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.habit-checkbox {
+  @apply w-6 h-6 rounded border-2 border-gray-300 flex items-center justify-center cursor-pointer transition-all duration-200 hover:border-primary-500;
+}
+
+.habit-checkbox.completed {
+  @apply bg-primary-500 border-primary-500 text-white;
+}
+
+.streak-indicator {
+  @apply px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.streak-high {
+  @apply bg-green-100 text-green-800;
+}
+
+.streak-medium {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.streak-low {
+  @apply bg-gray-100 text-gray-600;
+}
